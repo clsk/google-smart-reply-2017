@@ -1,0 +1,1 @@
+from .dual_encoder_dense import dual_encoder_trainer
