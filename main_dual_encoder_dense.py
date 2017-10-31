@@ -20,8 +20,6 @@ parser.add_argument('--eval_every_n_batches', default=200, type=int)
 parser.add_argument('--train_mode', default='train')
 
 # model params
-parser.add_argument('--embedding_dim', default=320, type=int)
-parser.add_argument('--max_seq_len', default=50, type=int)
 parser.add_argument('--nb_grams', default=2, type=int)
 
 # path params
