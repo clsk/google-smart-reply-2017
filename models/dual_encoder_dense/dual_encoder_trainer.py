@@ -203,7 +203,7 @@ def check_val_stats(model, pred_opt, data, hparams, X_ph, Y_ph, exp, sess, epoch
     """
     print('checking val loss...')
     max_val_batches = 100
-    val_gen = data.val_generator(data_type='val', batch_size=hparams.batch_size, max_epochs=1)
+    val_gen = data.val_generator(batch_size=hparams.batch_size, max_epochs=1)
 
     overall_err = []
     overall_p_1 = []
