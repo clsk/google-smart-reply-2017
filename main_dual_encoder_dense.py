@@ -42,6 +42,7 @@ parser.add_argument('--debug', default=False)
 
 # tf params
 parser.add_argument('--gpus', default='3')
+parser.add_json_config_argument('-c', '--config', type=str)
 # --------------------------
 # --------------------------
 
