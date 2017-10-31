@@ -23,14 +23,14 @@ parser.add_argument('--train_mode', default='train')
 parser.add_argument('--nb_grams', default=2, type=int)
 
 # path params
-parser.add_argument('--root_dir', default='/Users/waf/Desktop/angie_f')
-parser.add_argument('--dataset_train_path', default='/Users/waf/Desktop/angie_f/data/train.csv')
-parser.add_argument('--dataset_test_path', default='/Users/waf/Desktop/angie_f/data/test.csv')
-parser.add_argument('--dataset_val_path', default='/Users/waf/Desktop/angie_f/data/val.csv')
-parser.add_argument('--vocab_path', default='/Users/waf/Desktop/angie_f/data/vocabulary.txt')
+parser.add_argument('--root_dir', default='')
+parser.add_argument('--dataset_train_path', default='')
+parser.add_argument('--dataset_test_path', default='')
+parser.add_argument('--dataset_val_path', default='')
+parser.add_argument('--vocab_path', default='')
 
-parser.add_argument('--model_save_dir', default='/Users/waf/Desktop/angie_f/model_ckpt')
-parser.add_argument('--test_tube_dir', default='/Users/waf/Desktop/angie_f/test_tube')
+parser.add_argument('--model_save_dir', default='')
+parser.add_argument('--test_tube_dir', default='')
 
 # experiment params
 parser.add_argument('--exp_name', default='dual_conv_dense')
