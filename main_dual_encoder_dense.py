@@ -15,7 +15,6 @@ parser.add_opt_argument_list('--max_seq_len', default=50, options=[50, 70, 90, 1
 
 # training params
 parser.add_argument('--nb_epochs', default=30, type=int)
-parser.add_argument('--batch_size', default=10, type=int)
 parser.add_argument('--optimizer_name', default='adam')
 parser.add_argument('--eval_every_n_batches', default=200, type=int)
 parser.add_argument('--train_mode', default='train')
