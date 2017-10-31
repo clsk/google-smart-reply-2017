@@ -1,9 +1,9 @@
 # google-smart-reply-2017
-Google smart reply implementation in tensorflow
+Google [smart reply paper (2017)](https://arxiv.org/pdf/1705.00652.pdf) implementation in tensorflow
 
 ## Getting started
 
-1. Get Ubuntu corpus dataset for testing from [here](https://s3.amazonaws.com/ngv-public/data.zip)
+1. Get [Ubuntu corpus dataset](https://github.com/rkadlec/ubuntu-ranking-dataset-creator) for testing from [here](https://s3.amazonaws.com/ngv-public/data.zip)
 ```
 wget https://s3.amazonaws.com/ngv-public/data.zip -O data.zip
 ```
@@ -23,6 +23,7 @@ source activate sr
 
 4. Update the path variables with links to the data and where you want to save model output
 ```
+# main_dual_encoder_dense.py
 # path params
 parser.add_argument('--root_dir', default='')
 parser.add_argument('--dataset_train_path', default='')
