@@ -20,18 +20,21 @@ parser.add_argument('--train_mode', default='train')
 # model params
 parser.add_argument('--vocab_size', default=50000, type=int)
 parser.add_argument('--embedding_dim', default=320, type=int)
+parser.add_argument('--max_seq_len', default=50, type=int)
 parser.add_argument('--nb_grams', default=2, type=int)
 
 # dataset params
 parser.add_argument('--dataset_name', default='prod_all')
 
 # path params
-parser.add_argument('--root_dir', default='/media/gssda/NGV/sandbox')
-parser.add_argument('--dataset_save_dir', default='/dataset/cached_data')
-parser.add_argument('--model_save_dir', default='/.model_ckpt')
-parser.add_argument('--test_tube_dir', default='/.test_tube')
-parser.add_argument('--emb_vocab_path', default='/dataset/cached_data/prod_all/prod_all_terse_vocab.txt')
-parser.add_argument('--embeddings_path', default='/.model_ckpt/embeddings/epoch_2/ngram_skip_embeddings.cpkt')
+parser.add_argument('--root_dir', default='/Users/waf/Desktop/angie_f')
+parser.add_argument('--dataset_train_path', default='/Users/waf/Desktop/angie_f/data/train.csv')
+parser.add_argument('--dataset_test_path', default='/Users/waf/Desktop/angie_f/data/test.csv')
+parser.add_argument('--dataset_val_path', default='/Users/waf/Desktop/angie_f/data/val.csv')
+parser.add_argument('--vocab_path', default='/Users/waf/Desktop/angie_f/data/vocabulary.txt')
+
+parser.add_argument('--model_save_dir', default='/Users/waf/Desktop/angie_f/model_ckpt')
+parser.add_argument('--test_tube_dir', default='/Users/waf/Desktop/angie_f/test_tube')
 
 # experiment params
 parser.add_argument('--exp_name', default='dual_conv_bot')
@@ -45,11 +48,6 @@ parser.add_argument('--gpus', default='0')
 
 # parse params
 hparams = parser.parse_args()
-hparams.dataset_save_dir = hparams.root_dir + hparams.dataset_save_dir
-hparams.model_save_dir = hparams.root_dir + hparams.model_save_dir
-hparams.test_tube_dir = hparams.root_dir + hparams.test_tube_dir
-hparams.emb_vocab_path = hparams.root_dir + hparams.emb_vocab_path
-hparams.embeddings_path = hparams.root_dir + hparams.embeddings_path
 
 # --------------------------
 # TRAIN *****************
